@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.UserAuctionActivity">
+    tools:context=".activities.AdminCryptoActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -12,7 +12,7 @@
         android:layout_height="38dp"
         android:layout_marginTop="32dp"
         android:includeFontPadding="true"
-        android:text="@string/ongoing_auctions"
+        android:text="@string/top_cryptocurrencies"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,13 +20,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/auctionsList"
+        android:id="@+id/cryptoList"
         android:layout_width="359dp"
         android:layout_height="557dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:listitem="@layout/user_auction_item" />
+        tools:listitem="@layout/crypto_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
