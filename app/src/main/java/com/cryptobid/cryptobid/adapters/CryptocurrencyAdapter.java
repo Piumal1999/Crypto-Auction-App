@@ -34,7 +34,7 @@ public class CryptocurrencyAdapter extends RecyclerView.Adapter<CryptocurrencyVi
     @Override
     public void onBindViewHolder(@NonNull CryptocurrencyViewHolder holder, int position) {
         Cryptocurrency cryptocurrency = cryptocurrencies.get(position);
-        holder.setCryptoName(cryptocurrency.getName());
+        holder.setCryptoName(cryptocurrency.getName() + " (" + cryptocurrency.getSymbol() + ")");
     }
 
     @Override
