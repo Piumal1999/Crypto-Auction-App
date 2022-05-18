@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity"
-    tools:ignore="LabelFor">
+    tools:context=".activities.UserBidActivity">
 
     <TextView
         android:id="@+id/amountText"
@@ -97,6 +96,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="79dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
@@ -105,8 +105,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stratingTimeText"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-        android:autofillHints="" />
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/inputAmountText"
