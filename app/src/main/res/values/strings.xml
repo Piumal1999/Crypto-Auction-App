@@ -16,4 +16,10 @@
     <string name="input_amount">Input Amount</string>
     <string name="place_bid">Place Bid</string>
     <string name="previous_bids">Previous Bids</string>
+    <string name="ongoing_auctions">Ongoing Auctions</string>
+    <string name="start_at">Start at:</string>
+    <string name="end_at">End at:</string>
+    <string name="admin_auction_msg">Select the start time and end time for the auction</string>
+    <string name="start_auction_btn_text">Start/Schedule Auction</string>
+    <string name="cryptobid">CryptoBid</string>
 </resources>

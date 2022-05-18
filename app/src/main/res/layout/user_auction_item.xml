@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txt_crypto_name"
+            android:id="@+id/txt_auction_name"
             android:layout_width="271dp"
             android:layout_height="match_parent"
             android:gravity="center"
