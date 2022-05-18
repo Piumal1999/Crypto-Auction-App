@@ -2,4 +2,18 @@
     <string name="app_name">CryptoBid</string>
     <string name="loadingText">Loading…</string>
     <string name="top_cryptocurrencies">Top Cryptocurrencies</string>
+    <string name="amount">Amount</string>
+    <string name="_3_00">3:00</string>
+    <string name="bidcoin">Bidcoin</string>
+    <string name="end_at">End at:</string>
+    <string name="_1_00">1:00</string>
+    <string name="date">Date</string>
+    <string name="_2022_05_20">2022/05/20</string>
+    <string name="started_at">Started at:</string>
+    <string name="_2022_05_22">2022/05/22</string>
+    <string name="_300">300</string>
+    <string name="_500">500</string>
+    <string name="input_amount">Input Amount</string>
+    <string name="place_bid">Place Bid</string>
+    <string name="previous_bids">Previous Bids</string>
 </resources>
