@@ -9,7 +9,7 @@ import retrofit2.http.GET;
 
 public interface CryptocurrencyService {
 
-    @GET("/cryptocurrency")
+    @GET("/api/admin/cryptocurrency")
     Call<List<Cryptocurrency>> listCryptocurrencies();
 
 

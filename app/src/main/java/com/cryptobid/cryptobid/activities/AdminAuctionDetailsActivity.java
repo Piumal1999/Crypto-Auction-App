@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.cryptobid.cryptobid.R;
+
 public class AdminAuctionDetailsActivity extends AppCompatActivity {
 
     @Override

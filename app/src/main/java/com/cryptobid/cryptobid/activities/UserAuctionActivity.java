@@ -9,8 +9,11 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.cryptobid.cryptobid.R;
+import com.cryptobid.cryptobid.adapters.AuctionAdapter;
 import com.cryptobid.cryptobid.adapters.CryptocurrencyAdapter;
+import com.cryptobid.cryptobid.models.Auction;
 import com.cryptobid.cryptobid.models.Cryptocurrency;
+import com.cryptobid.cryptobid.network.AuctionService;
 import com.cryptobid.cryptobid.network.CryptocurrencyService;
 import com.cryptobid.cryptobid.network.RetrofitClient;
 
@@ -23,49 +26,47 @@ import retrofit2.Response;
 
 public class UserAuctionActivity extends AppCompatActivity {
 
-    // TODO: Replace with auctions
-
-    private RecyclerView rvCryptocurrencies;
-    private List<Cryptocurrency> cryptocurrencies;
+    private RecyclerView rvAuctions;
+    private List<Auction> auctionsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_auctions);
         init();
-        loadCryptocurrencies();
+        loadAuctions();
     }
 
-    private void loadCryptocurrencies() {
+    private void loadAuctions() {
 //        cryptocurrencies.add(new Cryptocurrency(1, "BTC", "Bitcoin", 1));
 //        cryptocurrencies.add(new Cryptocurrency(2, "ETH", "Ethereum", 2));
 //        cryptocurrencies.add(new Cryptocurrency(3, "XRP", "Ripple", 3));
-        CryptocurrencyService cryptocurrencyService = RetrofitClient.getRetrofitClient().create(CryptocurrencyService.class);
-        Call<List<Cryptocurrency>> call = cryptocurrencyService.listCryptocurrencies();
-        call.enqueue(new Callback<List<Cryptocurrency>>() {
+        AuctionService auctionService = RetrofitClient.getRetrofitClient().create(AuctionService.class);
+        Call<List<Auction>> call = auctionService.listAllAuctions();
+        call.enqueue(new Callback<List<Auction>>() {
             @Override
-            public void onResponse(@NonNull Call<List<Cryptocurrency>> call, @NonNull Response<List<Cryptocurrency>> response) {
+            public void onResponse(@NonNull Call<List<Auction>> call, @NonNull Response<List<Auction>> response) {
                 Log.d("log", "onResponse: " + response.code());
                 assert response.body() != null : "Response Body Empty";
-                cryptocurrencies.clear();
-                cryptocurrencies.addAll(response.body());
+                auctionsList.clear();
+                auctionsList.addAll(response.body());
                 setData();
             }
 
             @Override
-            public void onFailure(@NonNull Call<List<Cryptocurrency>> call, @NonNull Throwable t) {
+            public void onFailure(@NonNull Call<List<Auction>> call, @NonNull Throwable t) {
                 Log.d("log", "onFailure: " + t.getLocalizedMessage());
             }
         });
     }
 
     private void setData() {
-        rvCryptocurrencies.setLayoutManager(new LinearLayoutManager(this));
-        rvCryptocurrencies.setAdapter(new CryptocurrencyAdapter(this, cryptocurrencies));
+        rvAuctions.setLayoutManager(new LinearLayoutManager(this));
+        rvAuctions.setAdapter(new AuctionAdapter(this, auctionsList));
     }
 
     private void init() {
-        cryptocurrencies = new ArrayList<>();
-        rvCryptocurrencies = findViewById(R.id.auctionsList);
+        auctionsList = new ArrayList<>();
+        rvAuctions = findViewById(R.id.auctionsList);
     }
 }
