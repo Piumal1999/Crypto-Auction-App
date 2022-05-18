@@ -13,6 +13,7 @@
         android:layout_marginTop="72dp"
         android:text="@string/cryptobid"
         android:textSize="46sp"
+        android:textStyle="normal|bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,10 +40,11 @@
             app:cardCornerRadius="250dp">
 
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/ic_launcher" />
+                android:translationY="15dp"
+                app:srcCompat="@drawable/admin" />
 
         </androidx.cardview.widget.CardView>
 
@@ -79,10 +81,11 @@
             app:cardCornerRadius="250dp">
 
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="198dp"
+                android:layout_height="189dp"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/ic_launcher" />
+                android:translationX="-30dp"
+                app:srcCompat="@drawable/user" />
 
         </androidx.cardview.widget.CardView>
 
