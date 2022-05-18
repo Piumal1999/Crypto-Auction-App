@@ -37,6 +37,9 @@
         <activity
             android:name=".activities.UserBidActivity"
             android:exported="false" />
+        <activity
+            android:name=".activities.AdminAuctionDetailsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
