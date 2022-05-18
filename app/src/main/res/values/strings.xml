@@ -5,7 +5,6 @@
     <string name="amount">Amount</string>
     <string name="_3_00">3:00</string>
     <string name="bidcoin">Bidcoin</string>
-    <string name="end_at">End at:</string>
     <string name="_1_00">1:00</string>
     <string name="date">Date</string>
     <string name="_2022_05_20">2022/05/20</string>
@@ -22,4 +21,5 @@
     <string name="admin_auction_msg">Select the start time and end time for the auction</string>
     <string name="start_auction_btn_text">Start/Schedule Auction</string>
     <string name="cryptobid">CryptoBid</string>
+    <string name="auctions">Auctions</string>
 </resources>
